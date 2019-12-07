@@ -1,0 +1,19 @@
+<div>
+    <h2 class="Id">Bill Id : {{bill.Id}}</h2>
+    <h2 class="billDate">Bill Date: {{bill.Date}}</h2>
+    <h2 class="unitsOfDay">>Units consumed: {{bill.Units}}</h2>
+    
+</div>
+<div>
+        <label>Calculate bill for:</label>
+        <input type="text" value="days" class="form-control" [(ngModel)]="inputText" >
+        {{inputText}}
+        <button value="1" *ngIf="iscollapse" (click)="toggleCollapse()" id="month">Bill of months</button>
+        <button value="1" *ngIf="!iscollapse" (click)="toggleCollapse()" id="month">Hide</button>
+        <button value="2" *ngIf="iscollapse" (click)="toggleCollapse()" id="year">Bill of years</button>
+        <button value="2" *ngIf="!iscollapse" (click)="toggleCollapse()" id="year">Hide</button>
+        Result : display();
+    </div>
+<div *ngIf ="!iscollapse">
+
+</div>
