@@ -1,0 +1,34 @@
+<h1>Welcome to ABC Group</h1>
+<h2>Enter your bill</h2>
+<div>
+  <label>  Create Id :</label>
+    <input id="id" name="billId" class="form-control"
+    formControlName="id" required [(ngModel)]="inputText" >
+    {{inputText}}
+  
+    <label>Insert date:</label>
+    <input type="date" id=billDate name="billDate" class="form-control" 
+   class="form-control" [(ngModel)]="inputText" >
+   {{inputText}}
+  
+    <label>Units consumed:</label>
+    <input type="text" name="unitsOfDay" class="form-control" [(ngModel)]="inputText" >
+    {{inputText}}
+    
+  </div>
+  <button (click)="onClickMe">Save</button>
+
+</div>
+
+
+
+
+
+
+
+
+<app-address-card>
+  "Here is your bill: "[bill]="bill"
+</app-address-card>
+
+<app-view
